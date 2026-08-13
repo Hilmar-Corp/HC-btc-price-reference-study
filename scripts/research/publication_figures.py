@@ -204,7 +204,7 @@ def figure_venue_convergence(
         "Figure 1. Dispersion horaire Coinbase-Bitstamp",
         loc="left",
         pad=8,
-        fontweight="semibold",
+        fontweight="bold",
     )
 
     axis.grid(
@@ -306,7 +306,7 @@ def figure_extreme_revalidation(
         "Figure 2. Revalidation des écarts horaires extrêmes",
         loc="left",
         pad=8,
-        fontweight="semibold",
+        fontweight="bold",
     )
 
     axis.grid(
@@ -409,7 +409,7 @@ def figure_same_date_returns(
         f"Figure 3. Rendement selon l'heure de valorisation - {row['date']}",
         loc="left",
         pad=8,
-        fontweight="semibold",
+        fontweight="bold",
     )
 
     axis.grid(
@@ -423,7 +423,6 @@ def figure_same_date_returns(
         abs(values.max()),
     )
 
-    label_offset = span * 0.025
     left_margin = span * 0.055
     right_margin = span * 0.080
 
@@ -433,12 +432,20 @@ def figure_same_date_returns(
     )
 
     for index, value in enumerate(values):
-        axis.text(
-            value + label_offset,
-            index,
+        if value < 0:
+            xytext = (10, 9)
+            vertical_alignment = "bottom"
+        else:
+            xytext = (10, 0)
+            vertical_alignment = "center"
+
+        axis.annotate(
             f"{value:+.2f} %",
-            va="center",
+            xy=(value, index),
+            xytext=xytext,
+            textcoords="offset points",
             ha="left",
+            va=vertical_alignment,
             fontsize=7.6,
             color=BLACK,
         )
@@ -574,7 +581,7 @@ def figure_cutoff_vs_venue(
         "Figure 4. Effet plateforme et effet heure de valorisation",
         loc="left",
         pad=8,
-        fontweight="semibold",
+        fontweight="bold",
     )
 
     axis.grid(
@@ -682,7 +689,7 @@ def figure_volatility_appendix(
         "Annexe. Dispersion conditionnelle à la volatilité passée",
         loc="left",
         pad=8,
-        fontweight="semibold",
+        fontweight="bold",
     )
 
     axis.grid(
