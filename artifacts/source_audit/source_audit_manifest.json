@@ -1,0 +1,23 @@
+{
+  "artifact_count": 3,
+  "artifacts": [
+    {
+      "path": "research_contract.json",
+      "sha256": "7e754fd4b385a9c6a959d561911aaf7a3bf88fcb89d165f22b3e51b83787a4e3",
+      "size_bytes": 1976
+    },
+    {
+      "path": "source_registry.json",
+      "sha256": "9d32cf511f7e1d4be20df8f822eb52f6e50f1684d01f8c2d3d3768950de06fe5",
+      "size_bytes": 1167
+    },
+    {
+      "path": "artifacts/source_audit/source_capability_probe.json",
+      "sha256": "ea91cb4d99d00727534b22788508303d16ada4177447fc67bd05be734c29397e",
+      "size_bytes": 3973
+    }
+  ],
+  "generated_at_utc": "2026-08-12T23:56:04.191041+00:00",
+  "stage": "SOURCE_CAPABILITY_AUDIT",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE"
+}

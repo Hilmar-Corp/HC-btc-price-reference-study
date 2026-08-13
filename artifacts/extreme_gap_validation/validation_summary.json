@@ -1,0 +1,30 @@
+{
+  "events_with_coinbase_bitstamp_minute_validation": 39,
+  "events_with_full_three_source_minute_validation": 39,
+  "generated_at_utc": "2026-08-13T00:22:08.390635+00:00",
+  "hourly_observations": 78699,
+  "interpretation": "Extreme hourly candle-close dispersion is being revalidated using the final one-minute bucket on Coinbase and Bitstamp and exact Kraken BTC/USD trades inside the same minute. No result from this gate is treated as evidence of a persistent venue premium.",
+  "minute_three_source_dispersion_bps": {
+    "maximum": 994.785714285715,
+    "median": 595.2155688622745,
+    "p90": 728.8238910199517
+  },
+  "minute_two_source_dispersion_bps": {
+    "maximum": 854.6830035894368,
+    "median": 578.6015265641838
+  },
+  "missing_coinbase_hours": 45,
+  "selected_extreme_events": 40,
+  "selected_hourly_dispersion_bps": {
+    "maximum": 897.4297748172354,
+    "median": 579.6751818453017,
+    "minimum": 520.9737909709763
+  },
+  "stage": "EXTREME_GAP_MINUTE_REVALIDATION",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE",
+  "summary_sha256": "930c3ead8c922cf226e4e4deba0ec9bf01aabb71d2ae764ddcfba208d82e8872",
+  "two_source_revalidation_ratio": {
+    "median": 1.0,
+    "p90": 1.0
+  }
+}

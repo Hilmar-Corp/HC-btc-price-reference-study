@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hilmarcorp-btc-price-reference-study"
+version = "0.1.0"
+description = "Reproducible multi-venue research pipeline for Bitcoin price formation and valuation conventions."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "matplotlib==3.11.1",
+  "numpy==2.5.1",
+  "pandas==3.0.5",
+  "requests==2.34.2",
+  "tabulate==0.10.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scripts*"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["scripts", "tests"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP", "RUF"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["scripts"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-q --strict-config --strict-markers"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false

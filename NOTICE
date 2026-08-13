@@ -1,0 +1,14 @@
+HilmarCorp Bitcoin Price Reference Study
+Copyright 2026 HilmarCorp SAS
+
+This repository includes original software, research methodology,
+documentation, derived analytical evidence and visualisations developed
+by HilmarCorp SAS.
+
+Third-party market data is not licensed under the Apache License 2.0
+merely because it is referenced, accessed or analysed by this repository.
+
+Coinbase, Bitstamp, Kraken and other third-party names and trademarks
+remain the property of their respective owners.
+
+See DATA_NOTICE.md for the repository third-party data policy.

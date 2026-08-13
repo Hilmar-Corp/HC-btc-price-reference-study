@@ -1,0 +1,9 @@
+{
+  "branch_coverage": 0.9444444444444444,
+  "branch_gate_passed": true,
+  "line_coverage": 0.979381443298969,
+  "line_gate_passed": true,
+  "minimum_branch_coverage": 0.75,
+  "minimum_line_coverage": 0.85,
+  "validation_passed": true
+}

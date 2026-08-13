@@ -1,0 +1,39 @@
+{
+  "absolute_pairwise_difference_bps": {
+    "maximum": 939.5906040268453,
+    "mean": 6.348525322359099,
+    "median": 1.8848626534184731,
+    "p90": 9.058297098103907,
+    "p95": 15.697122095913135,
+    "p99": 87.38778802398292
+  },
+  "aligned_hours": 78699,
+  "bitstamp_hours": 78744,
+  "coinbase_hours": 78699,
+  "dispersion_bps": {
+    "maximum": 897.4297748172354,
+    "mean": 6.31130008545009,
+    "median": 1.8848691407944491,
+    "p90": 9.058966081790341,
+    "p95": 15.698662077461623,
+    "p99": 87.53752589543916,
+    "p999": 446.8010469515806
+  },
+  "first_timestamp": "2017-08-17T00:00:00+00:00",
+  "generated_at_utc": "2026-08-13T00:16:41.185065+00:00",
+  "hourly_return_correlation": 0.9862603406060442,
+  "hourly_return_sign_agreement": 0.9562250628986759,
+  "interpretation_status": "PRELIMINARY_PENDING_KRAKEN_AND_BOUNDARY_VALIDATION",
+  "intersection_ratio_vs_union": 0.9994285278878391,
+  "last_timestamp": "2026-08-10T23:00:00+00:00",
+  "measurement": "difference between venue-specific final traded prices inside identical UTC hourly buckets",
+  "rows": 78699,
+  "signed_pairwise_difference_bps": {
+    "mean": 2.4933266289984357,
+    "median": -0.13077517712845044
+  },
+  "stage": "TWO_VENUE_HOURLY_DISPERSION",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE",
+  "summary_sha256": "27d87534cb12bfb6560bdb9ea0db24dd747851e998198d463fb92453d09615bb",
+  "union_hours": 78744
+}

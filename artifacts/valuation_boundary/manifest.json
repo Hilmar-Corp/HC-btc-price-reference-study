@@ -1,0 +1,53 @@
+{
+  "artifacts": [
+    {
+      "path": "artifacts/valuation_boundary/cutoff_pairwise_summary.csv",
+      "sha256": "e8aebfba87bf7dd12d87e8da53298460841f0b38d9996bfa98f4323ab608f85d",
+      "size_bytes": 488
+    },
+    {
+      "path": "artifacts/valuation_boundary/venue_effect_summary.csv",
+      "sha256": "825b414ab7a651743ddea969cf2a56c0fc0412e078a0cdf0e5e45793b9862d46",
+      "size_bytes": 420
+    },
+    {
+      "path": "artifacts/valuation_boundary/subperiod_summary.csv",
+      "sha256": "ea31ae09c1baccfcf23609dc04b1b1fc312c4aeb6bba8e233cb8cc4662b83ffa",
+      "size_bytes": 702
+    },
+    {
+      "path": "artifacts/valuation_boundary/dst_sensitivity.csv",
+      "sha256": "25f5ec0ce150aa616f223ac3c023e4496a0430e29e14432a2fada9d3bf779ea1",
+      "size_bytes": 291
+    },
+    {
+      "path": "artifacts/valuation_boundary/largest_cutoff_effect_dates.csv",
+      "sha256": "60f47d097850de3c2eaf68bde6633c1aad5864623ef745a68127d5ccf15d3ba0",
+      "size_bytes": 15230
+    },
+    {
+      "path": "artifacts/valuation_boundary/missing_boundary_observations.csv",
+      "sha256": "e3687be0d7256998865ed6f852920b6eb92235088ae5a80b2b27abe8969e8f2d",
+      "size_bytes": 397
+    },
+    {
+      "path": "artifacts/valuation_boundary/validation_summary.json",
+      "sha256": "cab3258228507858f02f88dbac87ba6b3eaec4e0764055e12becee4d536cd8f8",
+      "size_bytes": 3614
+    }
+  ],
+  "local_uncommitted_artifacts": [
+    {
+      "path": "artifacts/valuation_boundary/boundary_prices_and_returns.csv.gz",
+      "sha256": "aa31dc3366b542e106116bcc69ee321983e8fec3afbad00e83bc999a587bc177",
+      "size_bytes": 560655
+    },
+    {
+      "path": "artifacts/valuation_boundary/complete_case_returns.csv.gz",
+      "sha256": "09c61495bd9ba4d79410cd2314892da826d8dbc0e4e6eb265aa5d96b25a42616",
+      "size_bytes": 381652
+    }
+  ],
+  "stage": "VALUATION_BOUNDARY_SENSITIVITY",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE"
+}

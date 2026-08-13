@@ -1,0 +1,21 @@
+{
+  "artifacts": [
+    {
+      "path": "artifacts/final_assurance/strict_calendar_rv_validation.csv",
+      "sha256": "e66a0cfaeebc1debf16b238281b6a4d1e4d07ee8da9d0d236fceae68ac82f526",
+      "size_bytes": 604
+    },
+    {
+      "path": "artifacts/final_assurance/assurance_checks.csv",
+      "sha256": "748517ba2f5e6981d0494588d19f49a45227388d332c7818ea47c338fa1babba",
+      "size_bytes": 1321
+    },
+    {
+      "path": "artifacts/final_assurance/consolidated_decision.json",
+      "sha256": "2115d75e05ea9daed27776e625bca64ff614dc782a3e9a734df373f8618db4d4",
+      "size_bytes": 1702
+    }
+  ],
+  "stage": "FINAL_CONSOLIDATED_RESEARCH_ASSURANCE",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE"
+}

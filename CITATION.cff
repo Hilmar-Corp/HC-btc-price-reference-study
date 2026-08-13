@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this research repository, please cite it."
+title: "Bitcoin Price Reference Study"
+type: software
+authors:
+  - name: "HilmarCorp SAS"
+repository-code: "https://github.com/Hilmar-Corp/HC-btc-price-reference-study"
+url: "https://github.com/Hilmar-Corp/HC-btc-price-reference-study"
+license: "Apache-2.0"
+version: "1.0.0"
+date-released: "2026-08-13"
+abstract: "Reproducible multi-venue empirical study of Bitcoin price dispersion, valuation cut-offs and reference-price construction."
+keywords:
+  - bitcoin
+  - quantitative-research
+  - market-microstructure
+  - price-reference
+  - reproducible-research

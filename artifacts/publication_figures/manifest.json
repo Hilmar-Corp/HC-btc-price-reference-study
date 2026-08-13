@@ -1,0 +1,56 @@
+{
+  "artifacts": [
+    {
+      "path": "artifacts/publication_figures/figure_01_venue_convergence.png",
+      "sha256": "79680a3d5a7d2985258299bd42dc764d1d751c02c19419258c2f9490022014a5",
+      "size_bytes": 106206
+    },
+    {
+      "path": "artifacts/publication_figures/figure_01_venue_convergence.svg",
+      "sha256": "44525223ad0759309dc5005460893d9193cccf708cc8a478bfa7b84d91517dcd",
+      "size_bytes": 47648
+    },
+    {
+      "path": "artifacts/publication_figures/figure_02_extreme_gap_revalidation.png",
+      "sha256": "4d3cc9d02fb7a0c5e28107c2e12d3101b6d9e27cc5472864938181a0978ab9a5",
+      "size_bytes": 73282
+    },
+    {
+      "path": "artifacts/publication_figures/figure_02_extreme_gap_revalidation.svg",
+      "sha256": "7ef80ee66a9f8eb6b3f0c34c9ddce783b5d3f8d75fb5fe37755789803609c547",
+      "size_bytes": 48758
+    },
+    {
+      "path": "artifacts/publication_figures/figure_03_same_date_different_returns.png",
+      "sha256": "d3e7395dcbbb231e92000be43a09eb59bf11eb15b1856b020a523528d4dfecca",
+      "size_bytes": 63355
+    },
+    {
+      "path": "artifacts/publication_figures/figure_03_same_date_different_returns.svg",
+      "sha256": "0942055b5a299e0e6fea1d04c3787887df24a12df550d6c100d9b56b149b749a",
+      "size_bytes": 46630
+    },
+    {
+      "path": "artifacts/publication_figures/figure_04_cutoff_vs_venue_effect.png",
+      "sha256": "a8c0b166f978a3944f4cca00833b9952397efd532817d5f3a4683dfef371db11",
+      "size_bytes": 105839
+    },
+    {
+      "path": "artifacts/publication_figures/figure_04_cutoff_vs_venue_effect.svg",
+      "sha256": "c4ed44b4d4403f211c11012cd80a36bef74dc77c53bbb972f25dd02f8b0b52fb",
+      "size_bytes": 66725
+    },
+    {
+      "path": "artifacts/publication_figures/figure_05_volatility_dispersion_appendix.png",
+      "sha256": "fb41085dca48297914cc4c17232f1ba6e15fd5376cb1316453e7c6dd81d81bb4",
+      "size_bytes": 97073
+    },
+    {
+      "path": "artifacts/publication_figures/figure_05_volatility_dispersion_appendix.svg",
+      "sha256": "d2aacd37b7b07391bf5d90a5c094ff424d3f478a41fd710571e56b49e862815a",
+      "size_bytes": 46290
+    }
+  ],
+  "stage": "PUBLICATION_FIGURES",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE"
+}

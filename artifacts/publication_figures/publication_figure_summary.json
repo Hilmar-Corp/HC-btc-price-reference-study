@@ -1,0 +1,37 @@
+{
+  "figures": [
+    {
+      "figure": "figure_01_venue_convergence",
+      "recent_median_bps": 0.8774374255
+    },
+    {
+      "figure": "figure_02_extreme_gap_revalidation",
+      "hourly_median_bps": 579.6751818453017,
+      "three_source_minute_median_bps": 595.2155688622745
+    },
+    {
+      "date": "2019-06-27",
+      "figure": "figure_03_same_date_different_returns",
+      "london_pct": -6.59792473,
+      "new_york_pct": -21.814685689999997,
+      "utc_pct": 9.9608024
+    },
+    {
+      "cutoff_median_max_bps": 225.3284219422,
+      "cutoff_median_min_bps": 102.3075151981,
+      "figure": "figure_04_cutoff_vs_venue_effect",
+      "venue_median_max_bps": 3.2898574512,
+      "venue_median_min_bps": 2.5966761276
+    },
+    {
+      "figure": "figure_05_volatility_dispersion_appendix",
+      "full_q5_q1": 3.271327670991465,
+      "recent_q5_q1": 1.480266982821437
+    }
+  ],
+  "final_assurance": "PASS",
+  "generated_at_utc": "2026-08-13T01:05:14.776004+00:00",
+  "stage": "PUBLICATION_FIGURES",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE",
+  "summary_sha256": "0bb0f28d56e3a693f8ef530312297a2134ced90edaea2366e1b320a86221a3f3"
+}

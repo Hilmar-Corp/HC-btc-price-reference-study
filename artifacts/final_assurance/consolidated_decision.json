@@ -1,0 +1,36 @@
+{
+  "assurance_stage": "FINAL_CONSOLIDATED_RESEARCH_ASSURANCE",
+  "decision": "PASS",
+  "decision_sha256": "5be0dca10a70c5f78a721934e2e83ced17efc078c6b6830cce6b5ef30bf6731d",
+  "failed_check_ids": [],
+  "failed_checks": 0,
+  "generated_at_utc": "2026-08-13T00:41:06.530696+00:00",
+  "non_validated_claims": [
+    "No causal claim that volatility causes cross-venue dispersion.",
+    "No claim that the research composite is an official benchmark.",
+    "No claim that a single exchange represents the unique true Bitcoin price.",
+    "No claim of trading profitability, forecasting power or investable performance."
+  ],
+  "passed_checks": 16,
+  "strict_calendar_volatility_validation": {
+    "absolute_full_sample_change": 0.002335895890418216,
+    "absolute_recent_change": 0.0008608481587408234,
+    "full_sample_observations": 78224,
+    "full_sample_positive_quintile_steps": 4,
+    "full_sample_q5_to_q1_ratio": 3.271327670992439,
+    "full_sample_spearman": 0.304585479173033,
+    "previous_full_sample_spearman": 0.30692137506345124,
+    "previous_recent_spearman": 0.13147120037000662,
+    "recent_2024_2026_spearman": 0.1306103522112658,
+    "recent_positive_quintile_steps": 4,
+    "recent_q5_to_q1_ratio": 1.480266982820218
+  },
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE",
+  "total_checks": 16,
+  "validated_empirical_scope": [
+    "Cross-venue hourly price dispersion on Coinbase BTC-USD and Bitstamp BTC/USD.",
+    "Minute-level revalidation of selected extreme observations using Kraken BTC/USD.",
+    "Sensitivity of daily returns to UTC, London and New York valuation boundaries.",
+    "Descriptive association between prior 24-hour realized volatility and venue dispersion."
+  ]
+}

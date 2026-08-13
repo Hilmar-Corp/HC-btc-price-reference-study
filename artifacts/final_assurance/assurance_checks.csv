@@ -1,0 +1,17 @@
+check_id,description,passed,observed,expected
+SRC-001,Historical source capability gate,True,True,True
+SRC-002,Recent source capability gate,True,True,True
+DATA-001,Coinbase hourly coverage >= 99.9%,True,0.9994285278878391,>=0.999
+DATA-002,Bitstamp hourly coverage >= 99.9%,True,1.0,>=0.999
+DATA-003,"Hourly aligned sample >= 78,000",True,78699,>=78000
+DISP-001,Hourly dispersion sample equals aligned sample,True,78699,78699
+EXT-001,At least 95% of selected extreme events revalidated with three sources,True,39/40,>=95%
+EXT-002,Extreme-gap median survives minute revalidation,True,1.0,>=0.90
+CUT-001,"Boundary complete-case sample >= 3,200 days",True,3271,>=3200
+CUT-002,Boundary missing observations <= 10,True,4,<=10
+CUT-003,DST exclusion does not drive cutoff result,True,See dst_sensitivity.csv: all-date and exact-24h distributions materially similar,documented
+VOL-001,Strict-calendar RV correction leaves full-sample Spearman materially unchanged,True,0.002335895890418216,<=0.01
+VOL-002,Strict-calendar RV correction leaves recent Spearman materially unchanged,True,0.0008608481587408234,<=0.01
+VOL-003,Strict-calendar full-sample volatility quintiles are monotonic,True,4,4
+VOL-004,Strict-calendar recent volatility quintiles are monotonic,True,4,4
+ART-001,All controlled assurance inputs exist,True,True,True

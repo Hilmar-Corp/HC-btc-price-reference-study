@@ -1,0 +1,68 @@
+name: Research Assurance
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  research-assurance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-ci.txt
+
+      - name: Install controlled dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-ci.txt
+          python -m pip check
+
+      - name: Ruff format
+        run: python -m ruff format --check scripts tests
+
+      - name: Ruff lint
+        run: python -m ruff check scripts tests
+
+      - name: Compile
+        run: python -m compileall -q scripts tests
+
+      - name: Deterministic test suite
+        run: python -m pytest -q
+
+      - name: Frozen repository evidence
+        run: python -m scripts.research.verify_repository
+
+      - name: Analytical core coverage
+        run: |
+          mkdir -p artifacts/ci_assurance
+          python -m coverage erase
+          python -m coverage run --branch --source=scripts.research.price_reference_core -m pytest -q tests/test_price_reference_core.py
+          python -m coverage json -o artifacts/ci_assurance/core_coverage.json
+          python -m scripts.research.ci_core_coverage_gate artifacts/ci_assurance/core_coverage.json
+
+      - name: Upload assurance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-assurance-evidence
+          if-no-files-found: error
+          path: |
+            evidence/repository_evidence.json
+            artifacts/final_assurance/consolidated_decision.json
+            artifacts/final_assurance/assurance_checks.csv
+            artifacts/ci_assurance/core_coverage.json

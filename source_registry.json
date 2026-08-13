@@ -1,0 +1,32 @@
+{
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE",
+  "sources": [
+    {
+      "name": "Coinbase",
+      "market": "BTC-USD",
+      "type": "spot",
+      "quote_currency": "USD",
+      "endpoint": "https://api.exchange.coinbase.com/products/BTC-USD/candles",
+      "documentation": "https://docs.cdp.coinbase.com/api-reference/exchange-api/rest-api/products/get-product-candles",
+      "commercial_and_redistribution_review": "REQUIRED_BEFORE_PUBLIC_DATA_REDISTRIBUTION"
+    },
+    {
+      "name": "Bitstamp",
+      "market": "BTC/USD",
+      "type": "spot",
+      "quote_currency": "USD",
+      "endpoint": "https://www.bitstamp.net/api/v2/ohlc/btcusd/",
+      "documentation": "https://www.bitstamp.net/api/",
+      "commercial_and_redistribution_review": "REQUIRED_BEFORE_PUBLIC_DATA_REDISTRIBUTION"
+    },
+    {
+      "name": "Kraken",
+      "market": "BTC/USD",
+      "type": "spot",
+      "quote_currency": "USD",
+      "endpoint": "https://api.kraken.com/0/public/PostTrade",
+      "documentation": "https://docs.kraken.com/api/docs/rest-api/get-post-trade",
+      "commercial_and_redistribution_review": "REQUIRED_BEFORE_PUBLIC_DATA_REDISTRIBUTION"
+    }
+  ]
+}

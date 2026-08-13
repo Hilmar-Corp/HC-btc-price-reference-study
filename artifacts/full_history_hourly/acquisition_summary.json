@@ -1,0 +1,39 @@
+{
+  "end_utc_exclusive": "2026-08-11T00:00:00+00:00",
+  "expected_hours": 78744,
+  "generated_at_utc": "2026-08-13T00:13:56.685469+00:00",
+  "sources": [
+    {
+      "coverage_ratio": 0.9994285278878391,
+      "duplicate_timestamps": 0,
+      "expected_hours": 78744,
+      "finite_values": true,
+      "first_timestamp": "2017-08-17T00:00:00+00:00",
+      "last_timestamp": "2026-08-10T23:00:00+00:00",
+      "missing_hours": 45,
+      "positive_prices": true,
+      "rows": 78699,
+      "sha256": "40042d5ee8ecd61923538234185a8a0dc3259b4986872597ecffdf4f2b8e2600",
+      "source": "Coinbase BTC-USD",
+      "valid_ohlc_relations": true
+    },
+    {
+      "coverage_ratio": 1.0,
+      "duplicate_timestamps": 0,
+      "expected_hours": 78744,
+      "finite_values": true,
+      "first_timestamp": "2017-08-17T00:00:00+00:00",
+      "last_timestamp": "2026-08-10T23:00:00+00:00",
+      "missing_hours": 0,
+      "positive_prices": true,
+      "rows": 78744,
+      "sha256": "7a5c0a3493686651637eab77875e91548b348359754a5a5469b94ba919bd02ba",
+      "source": "Bitstamp BTC/USD",
+      "valid_ohlc_relations": true
+    }
+  ],
+  "stage": "FULL_HISTORY_HOURLY_GATE",
+  "start_utc": "2017-08-17T00:00:00+00:00",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE",
+  "summary_sha256": "4c2e739114b153716f6dabb1925149edd474bc0815620d8985375dd53ec58460"
+}

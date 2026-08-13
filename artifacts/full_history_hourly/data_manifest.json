@@ -1,0 +1,20 @@
+{
+  "artifacts": [
+    {
+      "path": "data/cache/coinbase_btcusd_1h_2017-08-17_2026-08-10.csv.gz",
+      "sha256": "40042d5ee8ecd61923538234185a8a0dc3259b4986872597ecffdf4f2b8e2600",
+      "size_bytes": 1872813
+    },
+    {
+      "path": "data/cache/bitstamp_btcusd_1h_2017-08-17_2026-08-10.csv.gz",
+      "sha256": "7a5c0a3493686651637eab77875e91548b348359754a5a5469b94ba919bd02ba",
+      "size_bytes": 1737040
+    },
+    {
+      "path": "artifacts/full_history_hourly/acquisition_summary.json",
+      "sha256": "4367b9b13bfdd5c8e694ea656f120b3caf970c415f8ec5648c86c7675c89ca18",
+      "size_bytes": 1343
+    }
+  ],
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE"
+}

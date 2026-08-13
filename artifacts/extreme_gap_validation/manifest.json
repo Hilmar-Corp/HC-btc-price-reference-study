@@ -1,0 +1,31 @@
+{
+  "artifacts": [
+    {
+      "path": "artifacts/extreme_gap_validation/extreme_hourly_events.csv",
+      "sha256": "fe1c3a1313b2a1512bda6c7f560a55232343a655e8b9455a6cbe79babb67691c",
+      "size_bytes": 3866
+    },
+    {
+      "path": "artifacts/extreme_gap_validation/subperiod_summary.csv",
+      "sha256": "bf45c6067c1021220717a3e546cb2a89c78f7b3a00b51404d0726bd8d71283d7",
+      "size_bytes": 740
+    },
+    {
+      "path": "artifacts/extreme_gap_validation/missing_coinbase_hours.csv",
+      "sha256": "22c5ac6c83f4e50694236ab0f5190c104ffc3de11a63c9093990173024d001e3",
+      "size_bytes": 959
+    },
+    {
+      "path": "artifacts/extreme_gap_validation/validation_summary.json",
+      "sha256": "0c7632af38a6b0ebb729b0d92cd1db59330dd601fc3063548b6d66bc40f10fc9",
+      "size_bytes": 1202
+    }
+  ],
+  "local_uncommitted_validation_artifact": {
+    "path": "artifacts/extreme_gap_validation/minute_validation.csv.gz",
+    "sha256": "5bbf2b6897d03fa5b8f365676eaac3cb8bfea4e4fb537cc348244bcb2637a052",
+    "size_bytes": 7878
+  },
+  "stage": "EXTREME_GAP_MINUTE_REVALIDATION",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE"
+}

@@ -1,0 +1,25 @@
+{
+  "artifacts": [
+    {
+      "path": "artifacts/hourly_dispersion/aligned_hourly_closes.csv.gz",
+      "sha256": "ea06ff8321b6f5ea55ba6fc6a6ca8e6f64b10b09e24ba0350f64b2784929ed59",
+      "size_bytes": 2229997
+    },
+    {
+      "path": "artifacts/hourly_dispersion/pairwise_differences.csv.gz",
+      "sha256": "42e26fdc2decf04699479dd99f03f130c52d936473c58818e9e90b0001ef1a92",
+      "size_bytes": 957520
+    },
+    {
+      "path": "artifacts/hourly_dispersion/dispersion_quantiles.csv",
+      "sha256": "0043af37b83572e684750800e2ee34ee759ddea86373aed7485faed77fa70ead",
+      "size_bytes": 299
+    },
+    {
+      "path": "artifacts/hourly_dispersion/hourly_dispersion_summary.json",
+      "sha256": "0761bd4d0c31cdd1b7891ce714401578165dcd2fc5fa54172d04dc1a3011c6ce",
+      "size_bytes": 1397
+    }
+  ],
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE"
+}

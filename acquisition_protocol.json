@@ -1,0 +1,25 @@
+{
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE",
+  "protocol_version": "0.2.0",
+  "stage": "FULL_HISTORY_HOURLY_GATE",
+  "study_start_utc": "2017-08-17T00:00:00Z",
+  "study_end_utc_exclusive": "2026-08-11T00:00:00Z",
+  "granularity_seconds": 3600,
+  "primary_hourly_sources": [
+    "Coinbase BTC-USD",
+    "Bitstamp BTC/USD"
+  ],
+  "third_source_status": "KRAKEN_OFFICIAL_BULK_OHLCVT_RESERVED_FOR_MULTISOURCE_VALIDATION",
+  "measurement_definition": "Dispersion between venue-specific final traded prices within the same UTC hourly bucket.",
+  "primary_field": "close",
+  "alignment_rule": "Exact common UTC hourly bucket start.",
+  "missing_data_rule": "No interpolation and no forward fill.",
+  "duplicate_rule": "Conflicting duplicates are fatal.",
+  "price_validity_rule": "OHLC prices must be finite and strictly positive with low <= open/close <= high.",
+  "interpretation_limits": [
+    "Hourly candle closes are not perfectly synchronous executable prices.",
+    "The two-venue hourly result is not the final multi-venue conclusion.",
+    "A research median is not an official benchmark.",
+    "Missing candles are never synthetically reconstructed."
+  ]
+}

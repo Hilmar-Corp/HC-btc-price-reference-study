@@ -1,0 +1,41 @@
+{
+  "artifacts": [
+    {
+      "path": "artifacts/volatility_dispersion/volatility_quintiles.csv",
+      "sha256": "5a4771f75d88c982575c3e5f790d2670fed0b7cf3a21c6a3ba0c269a82ef2540",
+      "size_bytes": 979
+    },
+    {
+      "path": "artifacts/volatility_dispersion/subperiod_volatility_quintiles.csv",
+      "sha256": "1ed24a47b6a032ce2fffb5f7fde34f7d2ff186733b52b5f0710057d210bd15c2",
+      "size_bytes": 2642
+    },
+    {
+      "path": "artifacts/volatility_dispersion/spearman_correlations.csv",
+      "sha256": "d27d6829b3f625db4aa9701a2214e2b233ce84908e1196c9e735ea254911feb3",
+      "size_bytes": 172
+    },
+    {
+      "path": "artifacts/volatility_dispersion/newey_west_regressions.csv",
+      "sha256": "37318680e2ee1675851f6e6d7a19d9f02c333ffc515889f569e2f802e4693a0b",
+      "size_bytes": 1145
+    },
+    {
+      "path": "artifacts/volatility_dispersion/sensitivity_summary.csv",
+      "sha256": "81c87bed55825e42bb87d391d95184606c3d0af0652c5d70dde7bf1ccfd3d058",
+      "size_bytes": 436
+    },
+    {
+      "path": "artifacts/volatility_dispersion/validation_summary.json",
+      "sha256": "b3c0c1d7ee528d98021ec1184cef3a5d0e794d3fc5153f4e1dd481209a36bf99",
+      "size_bytes": 1848
+    }
+  ],
+  "local_uncommitted_artifact": {
+    "path": "artifacts/volatility_dispersion/hourly_panel.csv.gz",
+    "sha256": "a8e98e7824882e7b89c2b6ac9b3f0184d8de39ab49dd7edeeb68b82c1bd6d97e",
+    "size_bytes": 3698769
+  },
+  "stage": "VOLATILITY_DISPERSION_RELATIONSHIP",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE"
+}

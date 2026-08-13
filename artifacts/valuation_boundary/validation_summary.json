@@ -1,0 +1,113 @@
+{
+  "complete_return_dates": 3271,
+  "cutoff_return_dispersion_bps": {
+    "maximum": 3177.548808771771,
+    "mean": 378.2714949053381,
+    "median": 284.0602013495674,
+    "observations": 3271,
+    "p90": 787.5820703275671,
+    "p95": 997.5572722486181,
+    "p99": 1585.004156305421
+  },
+  "first_day": "2017-08-18",
+  "generated_at_utc": "2026-08-13T00:28:17.796636+00:00",
+  "interpretation_limits": [
+    "Different valuation cutoffs define different 24-hour market windows and are not trading strategies.",
+    "Local-clock cutoffs can create 23-hour or 25-hour intervals around daylight-saving transitions.",
+    "Hourly candle closes represent the final trade observed inside the preceding hourly bucket, not a synchronized top-of-book snapshot.",
+    "The primary composite uses Coinbase and Bitstamp only and is a research construction, not an official benchmark."
+  ],
+  "interval_hour_counts": {
+    "london_1600": {
+      "23.0": 9,
+      "24.0": 3261,
+      "25.0": 9
+    },
+    "new_york_1600": {
+      "23.0": 9,
+      "24.0": 3261,
+      "25.0": 9
+    },
+    "utc_0000": {
+      "24.0": 3279
+    }
+  },
+  "last_day": "2026-08-10",
+  "median_cutoff_effect_bps": 284.0602013495674,
+  "median_cutoff_to_venue_effect_ratio": 105.47124595556664,
+  "median_venue_effect_bps": 2.6932478020524897,
+  "missing_boundary_observations": 4,
+  "pairwise_cutoff_results": [
+    {
+      "comparison": "UTC 00:00 vs London 16:00",
+      "maximum": 2900.4449434570247,
+      "mean": 270.447822536349,
+      "median": 182.55480607829776,
+      "observations": 3271,
+      "p90": 617.0533783829824,
+      "p95": 798.7073706604886,
+      "p99": 1384.2010359988935,
+      "sign_disagreement": 0.4041577499235708
+    },
+    {
+      "comparison": "UTC 00:00 vs New York 16:00",
+      "maximum": 3177.548808771771,
+      "mean": 324.5575252796695,
+      "median": 225.32842194216585,
+      "observations": 3271,
+      "p90": 732.1883596701695,
+      "p95": 948.4858141242925,
+      "p99": 1515.6817441238356,
+      "sign_disagreement": 0.48394986242739224
+    },
+    {
+      "comparison": "London 16:00 vs New York 16:00",
+      "maximum": 2145.917250241086,
+      "mean": 161.5376419946577,
+      "median": 102.30751519808123,
+      "observations": 3271,
+      "p90": 382.47906814912966,
+      "p95": 509.10382172687616,
+      "p99": 868.2737000971823,
+      "sign_disagreement": 0.2393763375114644
+    }
+  ],
+  "stage": "VALUATION_BOUNDARY_SENSITIVITY",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE",
+  "summary_sha256": "c52af76fc9720853c712e074d911d68a4ec74b033e1ebd326dda066bb67bdd76",
+  "venue_effect_results": [
+    {
+      "convention": "utc_0000",
+      "maximum": 438.5482402583263,
+      "mean": 6.967896343053588,
+      "median": 2.596676127597508,
+      "observations": 3277,
+      "p90": 13.023883814363481,
+      "p95": 20.23872703722282,
+      "p99": 77.4684858581471,
+      "return_sign_disagreement": 0.009765028989929814
+    },
+    {
+      "convention": "london_1600",
+      "maximum": 865.2988712175546,
+      "mean": 7.427609714678736,
+      "median": 2.6932478020524897,
+      "observations": 3277,
+      "p90": 11.874050558975393,
+      "p95": 19.07640957108911,
+      "p99": 104.34482751555093,
+      "return_sign_disagreement": 0.010680500457735734
+    },
+    {
+      "convention": "new_york_1600",
+      "maximum": 470.08955709216815,
+      "mean": 7.335166809191664,
+      "median": 3.2898574512074674,
+      "observations": 3275,
+      "p90": 12.752067959853173,
+      "p95": 21.025706458272595,
+      "p99": 75.48203394075665,
+      "return_sign_disagreement": 0.010687022900763359
+    }
+  ]
+}

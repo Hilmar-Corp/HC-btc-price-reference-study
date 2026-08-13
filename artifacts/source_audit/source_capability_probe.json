@@ -1,0 +1,110 @@
+{
+  "artifact_sha256": "897d6246493824c4178fc46c56dc1a6931bc9baff319645ed5ed5a6d27d8b8f0",
+  "generated_at_utc": "2026-08-12T23:56:04.136315+00:00",
+  "historical_all_sources_passed": true,
+  "probe_windows": {
+    "historical": [
+      "2017-08-17T12:00:00Z",
+      "2017-08-17T12:10:00Z"
+    ],
+    "recent": [
+      "2026-08-10T12:00:00Z",
+      "2026-08-10T12:10:00Z"
+    ]
+  },
+  "recent_all_sources_passed": true,
+  "results": [
+    {
+      "capability_passed": true,
+      "earliest_in_window_observation": "2017-08-17T12:00:00Z",
+      "error": null,
+      "http_status": 200,
+      "in_window_observation_count": 11,
+      "latest_in_window_observation": "2017-08-17T12:10:00Z",
+      "market": "BTC-USD",
+      "probe_name": "historical",
+      "raw_observation_count": 11,
+      "requested_end": "2017-08-17T12:10:00Z",
+      "requested_start": "2017-08-17T12:00:00Z",
+      "response_sha256": "59ecfc2bbebddebfb2b0dc1fdb1ea99db8913f231a16cc9a57f29c38f6b5e58e",
+      "source": "Coinbase"
+    },
+    {
+      "capability_passed": true,
+      "earliest_in_window_observation": "2017-08-17T12:00:00Z",
+      "error": null,
+      "http_status": 200,
+      "in_window_observation_count": 11,
+      "latest_in_window_observation": "2017-08-17T12:10:00Z",
+      "market": "BTC/USD",
+      "probe_name": "historical",
+      "raw_observation_count": 20,
+      "requested_end": "2017-08-17T12:10:00Z",
+      "requested_start": "2017-08-17T12:00:00Z",
+      "response_sha256": "29a4332800fc972711f4c6b9915356ec9b2040c0756976d8f0bb001e8ca979c1",
+      "source": "Bitstamp"
+    },
+    {
+      "capability_passed": true,
+      "earliest_in_window_observation": "2017-08-17T12:00:05.196069Z",
+      "error": null,
+      "http_status": 200,
+      "in_window_observation_count": 252,
+      "latest_in_window_observation": "2017-08-17T12:09:55.493155Z",
+      "market": "BTC/USD",
+      "probe_name": "historical",
+      "raw_observation_count": 252,
+      "requested_end": "2017-08-17T12:10:00Z",
+      "requested_start": "2017-08-17T12:00:00Z",
+      "response_sha256": "b0a0898856242efaf6493e0a6eddcb798695b9130be76006d8b0f56db9f5ad34",
+      "source": "Kraken"
+    },
+    {
+      "capability_passed": true,
+      "earliest_in_window_observation": "2026-08-10T12:00:00Z",
+      "error": null,
+      "http_status": 200,
+      "in_window_observation_count": 11,
+      "latest_in_window_observation": "2026-08-10T12:10:00Z",
+      "market": "BTC-USD",
+      "probe_name": "recent",
+      "raw_observation_count": 11,
+      "requested_end": "2026-08-10T12:10:00Z",
+      "requested_start": "2026-08-10T12:00:00Z",
+      "response_sha256": "7d47269fd3404a9cef124f103b7d55987a09f645d2f79b3f59a2dc137124fb7d",
+      "source": "Coinbase"
+    },
+    {
+      "capability_passed": true,
+      "earliest_in_window_observation": "2026-08-10T12:00:00Z",
+      "error": null,
+      "http_status": 200,
+      "in_window_observation_count": 11,
+      "latest_in_window_observation": "2026-08-10T12:10:00Z",
+      "market": "BTC/USD",
+      "probe_name": "recent",
+      "raw_observation_count": 20,
+      "requested_end": "2026-08-10T12:10:00Z",
+      "requested_start": "2026-08-10T12:00:00Z",
+      "response_sha256": "e9df765ca8a75d6ac111793eeefab8912b0f145e577896dee4f0e59ca3f50b6e",
+      "source": "Bitstamp"
+    },
+    {
+      "capability_passed": true,
+      "earliest_in_window_observation": "2026-08-10T12:00:00.203594Z",
+      "error": null,
+      "http_status": 200,
+      "in_window_observation_count": 340,
+      "latest_in_window_observation": "2026-08-10T12:09:50.423321Z",
+      "market": "BTC/USD",
+      "probe_name": "recent",
+      "raw_observation_count": 340,
+      "requested_end": "2026-08-10T12:10:00Z",
+      "requested_start": "2026-08-10T12:00:00Z",
+      "response_sha256": "40a2db2fc60b3e7ffc6f04316a68aa8e7b819d74665495542914b82c7a71a6e0",
+      "source": "Kraken"
+    }
+  ],
+  "stage": "SOURCE_CAPABILITY_AUDIT",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE"
+}

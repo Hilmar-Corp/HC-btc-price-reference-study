@@ -1,0 +1,443 @@
+{
+  "controlled_file_count": 86,
+  "expected_final_assurance_checks": 16,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "c7aec8f86baafb45566d911f73055f55623c1579ed1821416935e8484c2e6c61",
+      "size_bytes": 105
+    },
+    {
+      "path": ".github/workflows/research-assurance.yml",
+      "sha256": "e7647a7ff836552485ac4071e8087a7c6a10232c80fac240c9652d7a54836f82",
+      "size_bytes": 1952
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "25f7cb84f94b83cb5362771487d73c506027585cc60447b8c0bbebf26e3003d2",
+      "size_bytes": 627
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "8e7a8032e25d69e4ab086beba68761047bf9c06768dc2084b7636ff2991a8a51",
+      "size_bytes": 641
+    },
+    {
+      "path": "DATA_NOTICE.md",
+      "sha256": "2de9733a69135bc51861248e4c23dbe0a4dbc8b24309c5a97711877cf84d01cd",
+      "size_bytes": 1420
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size_bytes": 11358
+    },
+    {
+      "path": "Makefile",
+      "sha256": "1303cf96f6c964656f4428086ab660e5dee6e7998001295ac786099fa627bf9c",
+      "size_bytes": 884
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "8f83986d48d698a22e28032b220765606cd90998ca1c6c00d2735b881d0f5f18",
+      "size_bytes": 556
+    },
+    {
+      "path": "README.md",
+      "sha256": "bdd986a43015fd8b495a711d45d0f6aca6e3c8b5bc3c9cdde7736bae4f2f7ac7",
+      "size_bytes": 11979
+    },
+    {
+      "path": "REPRODUCIBILITY.md",
+      "sha256": "8be7598ef914bbcd9bd063021d321a4a89488927e2863cc67af760a4eb6ac168",
+      "size_bytes": 2009
+    },
+    {
+      "path": "RESEARCH_ASSURANCE.md",
+      "sha256": "bac403af7a14609930813f21abd38ef671649c027b60dad4af8c010a2329cba0",
+      "size_bytes": 1758
+    },
+    {
+      "path": "acquisition_protocol.json",
+      "sha256": "7d583591ecb5400f88bd299007b27be2ab3f44da1131c83346f385aea15a397e",
+      "size_bytes": 1166
+    },
+    {
+      "path": "artifacts/extreme_gap_validation/extreme_hourly_events.csv",
+      "sha256": "fe1c3a1313b2a1512bda6c7f560a55232343a655e8b9455a6cbe79babb67691c",
+      "size_bytes": 3866
+    },
+    {
+      "path": "artifacts/extreme_gap_validation/manifest.json",
+      "sha256": "332c2a38a7126012585e073f88e34848d5efe14eee1cc328d5bc5145826ac1ed",
+      "size_bytes": 1130
+    },
+    {
+      "path": "artifacts/extreme_gap_validation/missing_coinbase_hours.csv",
+      "sha256": "22c5ac6c83f4e50694236ab0f5190c104ffc3de11a63c9093990173024d001e3",
+      "size_bytes": 959
+    },
+    {
+      "path": "artifacts/extreme_gap_validation/subperiod_summary.csv",
+      "sha256": "bf45c6067c1021220717a3e546cb2a89c78f7b3a00b51404d0726bd8d71283d7",
+      "size_bytes": 740
+    },
+    {
+      "path": "artifacts/extreme_gap_validation/validation_summary.json",
+      "sha256": "0c7632af38a6b0ebb729b0d92cd1db59330dd601fc3063548b6d66bc40f10fc9",
+      "size_bytes": 1202
+    },
+    {
+      "path": "artifacts/final_assurance/assurance_checks.csv",
+      "sha256": "748517ba2f5e6981d0494588d19f49a45227388d332c7818ea47c338fa1babba",
+      "size_bytes": 1321
+    },
+    {
+      "path": "artifacts/final_assurance/consolidated_decision.json",
+      "sha256": "2115d75e05ea9daed27776e625bca64ff614dc782a3e9a734df373f8618db4d4",
+      "size_bytes": 1702
+    },
+    {
+      "path": "artifacts/final_assurance/manifest.json",
+      "sha256": "e07320eba0e136aaf6ca636910b63ffc359ba3f00d112c9c39b7f984fc4cb036",
+      "size_bytes": 699
+    },
+    {
+      "path": "artifacts/final_assurance/strict_calendar_rv_validation.csv",
+      "sha256": "e66a0cfaeebc1debf16b238281b6a4d1e4d07ee8da9d0d236fceae68ac82f526",
+      "size_bytes": 604
+    },
+    {
+      "path": "artifacts/full_history_hourly/acquisition_summary.json",
+      "sha256": "4367b9b13bfdd5c8e694ea656f120b3caf970c415f8ec5648c86c7675c89ca18",
+      "size_bytes": 1343
+    },
+    {
+      "path": "artifacts/full_history_hourly/data_manifest.json",
+      "sha256": "503bd9b6090c8544632f540218973dd68ac86433125f1bab6c655bfa33e4bcf4",
+      "size_bytes": 667
+    },
+    {
+      "path": "artifacts/gate3_validation/core_coverage.json",
+      "sha256": "990ed2f5e2f050790e6f5f2dee8ab16680091d4710868e1d5a26994377a1c649",
+      "size_bytes": 10365
+    },
+    {
+      "path": "artifacts/gate3_validation/core_coverage_summary.json",
+      "sha256": "2df70eb3a8c0605193a19844efbdc7465866ac640160eb66bcd441e86cb3d9cb",
+      "size_bytes": 236
+    },
+    {
+      "path": "artifacts/hourly_dispersion/dispersion_quantiles.csv",
+      "sha256": "0043af37b83572e684750800e2ee34ee759ddea86373aed7485faed77fa70ead",
+      "size_bytes": 299
+    },
+    {
+      "path": "artifacts/hourly_dispersion/hourly_dispersion_summary.json",
+      "sha256": "0761bd4d0c31cdd1b7891ce714401578165dcd2fc5fa54172d04dc1a3011c6ce",
+      "size_bytes": 1397
+    },
+    {
+      "path": "artifacts/hourly_dispersion/manifest.json",
+      "sha256": "5170335ed2e8a4b0381a4e0ee7b2069f1cb6d52424dfab342d58785fc329bf19",
+      "size_bytes": 856
+    },
+    {
+      "path": "artifacts/publication_figures/figure_01_venue_convergence.png",
+      "sha256": "79680a3d5a7d2985258299bd42dc764d1d751c02c19419258c2f9490022014a5",
+      "size_bytes": 106206
+    },
+    {
+      "path": "artifacts/publication_figures/figure_01_venue_convergence.svg",
+      "sha256": "44525223ad0759309dc5005460893d9193cccf708cc8a478bfa7b84d91517dcd",
+      "size_bytes": 47648
+    },
+    {
+      "path": "artifacts/publication_figures/figure_02_extreme_gap_revalidation.png",
+      "sha256": "4d3cc9d02fb7a0c5e28107c2e12d3101b6d9e27cc5472864938181a0978ab9a5",
+      "size_bytes": 73282
+    },
+    {
+      "path": "artifacts/publication_figures/figure_02_extreme_gap_revalidation.svg",
+      "sha256": "7ef80ee66a9f8eb6b3f0c34c9ddce783b5d3f8d75fb5fe37755789803609c547",
+      "size_bytes": 48758
+    },
+    {
+      "path": "artifacts/publication_figures/figure_03_same_date_different_returns.png",
+      "sha256": "d3e7395dcbbb231e92000be43a09eb59bf11eb15b1856b020a523528d4dfecca",
+      "size_bytes": 63355
+    },
+    {
+      "path": "artifacts/publication_figures/figure_03_same_date_different_returns.svg",
+      "sha256": "0942055b5a299e0e6fea1d04c3787887df24a12df550d6c100d9b56b149b749a",
+      "size_bytes": 46630
+    },
+    {
+      "path": "artifacts/publication_figures/figure_04_cutoff_vs_venue_effect.png",
+      "sha256": "a8c0b166f978a3944f4cca00833b9952397efd532817d5f3a4683dfef371db11",
+      "size_bytes": 105839
+    },
+    {
+      "path": "artifacts/publication_figures/figure_04_cutoff_vs_venue_effect.svg",
+      "sha256": "c4ed44b4d4403f211c11012cd80a36bef74dc77c53bbb972f25dd02f8b0b52fb",
+      "size_bytes": 66725
+    },
+    {
+      "path": "artifacts/publication_figures/figure_05_volatility_dispersion_appendix.png",
+      "sha256": "fb41085dca48297914cc4c17232f1ba6e15fd5376cb1316453e7c6dd81d81bb4",
+      "size_bytes": 97073
+    },
+    {
+      "path": "artifacts/publication_figures/figure_05_volatility_dispersion_appendix.svg",
+      "sha256": "d2aacd37b7b07391bf5d90a5c094ff424d3f478a41fd710571e56b49e862815a",
+      "size_bytes": 46290
+    },
+    {
+      "path": "artifacts/publication_figures/manifest.json",
+      "sha256": "531679348b1d47fbd55cb35a42888d245dfad19699ab0e85215948c828f7a5b6",
+      "size_bytes": 2197
+    },
+    {
+      "path": "artifacts/publication_figures/publication_figure_summary.json",
+      "sha256": "54c818c160b16b816c12e101b13ec755e3765c33f3edadb337382d683df62c03",
+      "size_bytes": 1148
+    },
+    {
+      "path": "artifacts/source_audit/source_audit_manifest.json",
+      "sha256": "959834661b3b7493ef141184bb3009eebd0af83fd2364782226b24b5f0be5e29",
+      "size_bytes": 703
+    },
+    {
+      "path": "artifacts/source_audit/source_capability_probe.json",
+      "sha256": "ea91cb4d99d00727534b22788508303d16ada4177447fc67bd05be734c29397e",
+      "size_bytes": 3973
+    },
+    {
+      "path": "artifacts/valuation_boundary/cutoff_pairwise_summary.csv",
+      "sha256": "e8aebfba87bf7dd12d87e8da53298460841f0b38d9996bfa98f4323ab608f85d",
+      "size_bytes": 488
+    },
+    {
+      "path": "artifacts/valuation_boundary/dst_sensitivity.csv",
+      "sha256": "25f5ec0ce150aa616f223ac3c023e4496a0430e29e14432a2fada9d3bf779ea1",
+      "size_bytes": 291
+    },
+    {
+      "path": "artifacts/valuation_boundary/largest_cutoff_effect_dates.csv",
+      "sha256": "60f47d097850de3c2eaf68bde6633c1aad5864623ef745a68127d5ccf15d3ba0",
+      "size_bytes": 15230
+    },
+    {
+      "path": "artifacts/valuation_boundary/manifest.json",
+      "sha256": "466f6925eae24c857f2022a4c6344c8833a220edee8bc6c4f3dc6dd7f462f968",
+      "size_bytes": 1916
+    },
+    {
+      "path": "artifacts/valuation_boundary/missing_boundary_observations.csv",
+      "sha256": "e3687be0d7256998865ed6f852920b6eb92235088ae5a80b2b27abe8969e8f2d",
+      "size_bytes": 397
+    },
+    {
+      "path": "artifacts/valuation_boundary/subperiod_summary.csv",
+      "sha256": "ea31ae09c1baccfcf23609dc04b1b1fc312c4aeb6bba8e233cb8cc4662b83ffa",
+      "size_bytes": 702
+    },
+    {
+      "path": "artifacts/valuation_boundary/validation_summary.json",
+      "sha256": "cab3258228507858f02f88dbac87ba6b3eaec4e0764055e12becee4d536cd8f8",
+      "size_bytes": 3614
+    },
+    {
+      "path": "artifacts/valuation_boundary/venue_effect_summary.csv",
+      "sha256": "825b414ab7a651743ddea969cf2a56c0fc0412e078a0cdf0e5e45793b9862d46",
+      "size_bytes": 420
+    },
+    {
+      "path": "artifacts/volatility_dispersion/manifest.json",
+      "sha256": "ed38c015fffdbe6273dbc316c512782b40708629b69eae050a00a1d27874f18b",
+      "size_bytes": 1518
+    },
+    {
+      "path": "artifacts/volatility_dispersion/newey_west_regressions.csv",
+      "sha256": "37318680e2ee1675851f6e6d7a19d9f02c333ffc515889f569e2f802e4693a0b",
+      "size_bytes": 1145
+    },
+    {
+      "path": "artifacts/volatility_dispersion/sensitivity_summary.csv",
+      "sha256": "81c87bed55825e42bb87d391d95184606c3d0af0652c5d70dde7bf1ccfd3d058",
+      "size_bytes": 436
+    },
+    {
+      "path": "artifacts/volatility_dispersion/spearman_correlations.csv",
+      "sha256": "d27d6829b3f625db4aa9701a2214e2b233ce84908e1196c9e735ea254911feb3",
+      "size_bytes": 172
+    },
+    {
+      "path": "artifacts/volatility_dispersion/subperiod_volatility_quintiles.csv",
+      "sha256": "1ed24a47b6a032ce2fffb5f7fde34f7d2ff186733b52b5f0710057d210bd15c2",
+      "size_bytes": 2642
+    },
+    {
+      "path": "artifacts/volatility_dispersion/validation_summary.json",
+      "sha256": "b3c0c1d7ee528d98021ec1184cef3a5d0e794d3fc5153f4e1dd481209a36bf99",
+      "size_bytes": 1848
+    },
+    {
+      "path": "artifacts/volatility_dispersion/volatility_quintiles.csv",
+      "sha256": "5a4771f75d88c982575c3e5f790d2670fed0b7cf3a21c6a3ba0c269a82ef2540",
+      "size_bytes": 979
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "3b35b152acb95446463015e32f70f0deab668a95b23e6fcf84e38c87c5f28d4b",
+      "size_bytes": 957
+    },
+    {
+      "path": "requirements-ci.txt",
+      "sha256": "49426f6c2755d377e462b3f7eb9c8bc1bc9c38feaffcf7bc256fc5fa43fff849",
+      "size_bytes": 142
+    },
+    {
+      "path": "research_contract.json",
+      "sha256": "7e754fd4b385a9c6a959d561911aaf7a3bf88fcb89d165f22b3e51b83787a4e3",
+      "size_bytes": 1976
+    },
+    {
+      "path": "scripts/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "scripts/research/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "scripts/research/artifact_manifest.py",
+      "sha256": "8a67ee6a21d34a57e2c396fae770158d50557abd97bf429401b9d3ca9b684cb5",
+      "size_bytes": 1729
+    },
+    {
+      "path": "scripts/research/ci_core_coverage_gate.py",
+      "sha256": "2a99c3504523b8b6dc2a3932656acad7c1c4e88613bed698357f256397e11621",
+      "size_bytes": 1627
+    },
+    {
+      "path": "scripts/research/coverage_gate.py",
+      "sha256": "fc81ce7b8f4b5f2a8b7a3a8c52fa5e29bfad95184f3a20fd7e0601a5e206b566",
+      "size_bytes": 1955
+    },
+    {
+      "path": "scripts/research/extreme_gap_validation.py",
+      "sha256": "bd96543b31da208d21ace2a6883e655d60ee5c5cf5363e293e64b0fcfa26e8c5",
+      "size_bytes": 24782
+    },
+    {
+      "path": "scripts/research/final_assurance.py",
+      "sha256": "c4133e489b93560d0b2acecf1502c3203f8a692acd57d8f66ea5f58917bb957d",
+      "size_bytes": 18791
+    },
+    {
+      "path": "scripts/research/freeze_repository_evidence.py",
+      "sha256": "473f075a937f57da8de7d63a5e68115b114662256b3a936cc035b104c40c99ae",
+      "size_bytes": 3034
+    },
+    {
+      "path": "scripts/research/hourly_dispersion_analysis.py",
+      "sha256": "1ec27c2f9244709ea58a8f090e1a4c2e9b3910ca25fa038976a077bf09a52b98",
+      "size_bytes": 9347
+    },
+    {
+      "path": "scripts/research/hourly_history.py",
+      "sha256": "d5d2af88ce3d88af26f40f89e38997cb0d961138abd476c7655fe5a2ebb77aac",
+      "size_bytes": 16381
+    },
+    {
+      "path": "scripts/research/price_reference_core.py",
+      "sha256": "d723322b17ea4950eb4673f66f0f762c80ed7916581b61f1a376e055f4c06bb0",
+      "size_bytes": 4580
+    },
+    {
+      "path": "scripts/research/publication_figures.py",
+      "sha256": "8c71163911ad14de38f6178330957943e937050065c1e12d818bfc93d35d3e98",
+      "size_bytes": 17969
+    },
+    {
+      "path": "scripts/research/source_capability_probe.py",
+      "sha256": "38323a0eb0f63cb90cb4d863eccb63639bc673146a79a359c8a28fc38b749e41",
+      "size_bytes": 11416
+    },
+    {
+      "path": "scripts/research/valuation_boundary_analysis.py",
+      "sha256": "abfb065d7d9e7ce9a4563db70035c20d57187e8f9c31e7d71b9c9f49f9903777",
+      "size_bytes": 22071
+    },
+    {
+      "path": "scripts/research/verify_repository.py",
+      "sha256": "c8e23ed510268320bb8f9787d16bfdfb4dd033d0d9dcc724d63a1731481cc685",
+      "size_bytes": 5085
+    },
+    {
+      "path": "scripts/research/volatility_dispersion_analysis.py",
+      "sha256": "5a3541d29d4ba2f3fd178fbb42aa2c6f6e07e0553f09fe41ae4d687961bededc",
+      "size_bytes": 23833
+    },
+    {
+      "path": "source_registry.json",
+      "sha256": "9d32cf511f7e1d4be20df8f822eb52f6e50f1684d01f8c2d3d3768950de06fe5",
+      "size_bytes": 1167
+    },
+    {
+      "path": "tests/test_extreme_gap_validation.py",
+      "sha256": "9dfe62cba75dee0c255a5009703b11f3b5c2228a62d7d53126e461291c3725e6",
+      "size_bytes": 1634
+    },
+    {
+      "path": "tests/test_final_assurance.py",
+      "sha256": "c67de9bd12487560b74374653831fbb76cc6ecc5a5df9dfc86c3f2ebebbd9721",
+      "size_bytes": 2036
+    },
+    {
+      "path": "tests/test_hourly_history.py",
+      "sha256": "026b7631bd9eeb8b9cfaa4dcea961e0a744556a3dcbf5b416abfd040f58187f4",
+      "size_bytes": 2351
+    },
+    {
+      "path": "tests/test_price_reference_core.py",
+      "sha256": "c6bb699f064883556f63e2b830b19d24fda55051345d59fac824cf5ba84d98e1",
+      "size_bytes": 7523
+    },
+    {
+      "path": "tests/test_publication_figures.py",
+      "sha256": "3c2368a33a3c58b9c3fafc1a1681bb5c53cfee914f22988f50b26a04ab0a214d",
+      "size_bytes": 1324
+    },
+    {
+      "path": "tests/test_repository_assurance.py",
+      "sha256": "cec628bf6eaa68768916caf30811b18938579c6a2b3010f5f91aa3c3bb64c20d",
+      "size_bytes": 1179
+    },
+    {
+      "path": "tests/test_source_capability_probe.py",
+      "sha256": "d402585c9b7bb525df5656e2f5922c1e238d08a27d719ab3c9ada5e09b443a07",
+      "size_bytes": 1947
+    },
+    {
+      "path": "tests/test_valuation_boundary_analysis.py",
+      "sha256": "a7adf62db974b8b8a146f4a84689ade180bc946b446bf2c2051d939372e821b6",
+      "size_bytes": 2817
+    },
+    {
+      "path": "tests/test_volatility_dispersion_analysis.py",
+      "sha256": "8c6c5e41ee3a8bc1d7a77c64988307c887804665c352d5d16a155875d6a13b8d",
+      "size_bytes": 3335
+    }
+  ],
+  "final_assurance_decision": "PASS",
+  "generated_at_utc": "2026-08-13T01:16:01.946258+00:00",
+  "raw_market_data_included": false,
+  "release": "1.0.0",
+  "repository": "Hilmar-Corp/HC-btc-price-reference-study",
+  "state": "FROZEN",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE"
+}

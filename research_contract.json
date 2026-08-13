@@ -1,0 +1,55 @@
+{
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE",
+  "version": "0.1.0",
+  "status": "SOURCE_CAPABILITY_AUDIT",
+  "research_question": "How different are contemporaneous Bitcoin prices across USD spot venues, how can a reference price be constructed, and how sensitive are daily Bitcoin returns to the selected valuation boundary?",
+  "primary_asset": "Bitcoin",
+  "primary_quote_currency": "USD",
+  "primary_market_type": "spot",
+  "primary_venues": [
+    "Coinbase",
+    "Bitstamp",
+    "Kraken"
+  ],
+  "primary_design_rules": {
+    "usd_pairs_only": true,
+    "stablecoin_pairs_excluded_from_primary_analysis": true,
+    "no_interpolation": true,
+    "no_forward_fill_across_missing_market_observations": true,
+    "exact_or_explicitly_bounded_timestamp_matching": true,
+    "timezone_aware_boundaries": true,
+    "dst_aware_local_closing_conventions": true,
+    "no_silent_source_fallback": true,
+    "fail_closed_on_primary_data_contract_violation": true
+  },
+  "planned_primary_metrics": [
+    "cross_venue_median",
+    "venue_deviation_bps_from_cross_venue_median",
+    "cross_venue_dispersion_bps",
+    "pairwise_price_difference_bps",
+    "pairwise_return_correlation",
+    "sign_agreement",
+    "closing_boundary_return_difference_bps"
+  ],
+  "planned_closing_conventions": [
+    "00:00 UTC",
+    "16:00 Europe/London",
+    "16:00 America/New_York"
+  ],
+  "planned_sensitivity_checks": [
+    "venue_exclusion",
+    "alternative_aggregation_rule",
+    "high_volatility_vs_low_volatility",
+    "subperiod_stability",
+    "timestamp_tolerance",
+    "closing_boundary_convention",
+    "extreme_observation_removal"
+  ],
+  "prohibited_interpretations": [
+    "claiming that one venue represents the unique true Bitcoin price",
+    "claiming that a research composite is an official benchmark",
+    "treating USDT as USD in the primary experiment",
+    "presenting historical dispersion as a forecast",
+    "presenting a chosen daily close as a natural market close"
+  ]
+}

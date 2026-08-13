@@ -1,0 +1,37 @@
+{
+  "eligible_observations": 78674,
+  "first_eligible_timestamp": "2017-08-18T01:00:00+00:00",
+  "full_sample_positive_adjacent_quintile_steps": 4,
+  "full_sample_q5_to_q1_median_ratio": 3.3171514551294474,
+  "full_sample_quintile_medians_bps": {
+    "1": 1.2267335718299066,
+    "2": 1.4361926799672815,
+    "3": 1.7458042895803088,
+    "4": 2.2380094817776195,
+    "5": 4.0692610528517195
+  },
+  "full_sample_spearman": 0.30692137506345124,
+  "generated_at_utc": "2026-08-13T00:35:49.146692+00:00",
+  "interpretation_limits": [
+    "The analysis is descriptive and does not establish that volatility causes venue dispersion.",
+    "Realized volatility is measured from the prior 24 hours only to prevent contemporaneous leakage.",
+    "Hourly venue closes are not perfectly synchronized executable prices.",
+    "The historical relationship can vary materially across subperiods.",
+    "Statistical significance must not be interpreted as economic predictability."
+  ],
+  "last_eligible_timestamp": "2026-08-10T23:00:00+00:00",
+  "lookahead_control": "The hourly return ending in the current dispersion bucket is excluded from the volatility estimate.",
+  "newey_west_log_specification": {
+    "hac_lags": 24,
+    "hac_standard_error": 0.023178133604775223,
+    "hac_t_statistic": 22.417577505226536,
+    "normal_approximation_p_value": 2.6523285428574864e-111,
+    "r_squared": 0.13202599715580599,
+    "slope": 0.5195976065115443
+  },
+  "recent_2024_2026_spearman": 0.13147120037000662,
+  "stage": "VOLATILITY_DISPERSION_RELATIONSHIP",
+  "study_id": "HILMARCORP-BTC-PRICE-REFERENCE",
+  "summary_sha256": "fe920445950d78af71a81612bec593e02081790e77737023b3c2ca71d0186ecd",
+  "volatility_definition": "Square root of the sum of squared hourly log returns over the 24 strictly preceding observations of the Coinbase-Bitstamp research composite."
+}
