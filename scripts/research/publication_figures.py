@@ -423,15 +423,22 @@ def figure_same_date_returns(
         abs(values.max()),
     )
 
-    for index, value in enumerate(values):
-        offset = span * 0.035 if value >= 0 else -span * 0.035
+    label_offset = span * 0.025
+    left_margin = span * 0.055
+    right_margin = span * 0.080
 
+    axis.set_xlim(
+        values.min() - left_margin,
+        values.max() + right_margin,
+    )
+
+    for index, value in enumerate(values):
         axis.text(
-            value + offset,
+            value + label_offset,
             index,
             f"{value:+.2f} %",
             va="center",
-            ha=("left" if value >= 0 else "right"),
+            ha="left",
             fontsize=7.6,
             color=BLACK,
         )

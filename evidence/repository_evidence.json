@@ -149,7 +149,7 @@
     },
     {
       "path": "artifacts/publication_figures/figure_01_venue_convergence.svg",
-      "sha256": "44525223ad0759309dc5005460893d9193cccf708cc8a478bfa7b84d91517dcd",
+      "sha256": "be9c6628bddac1dab4ad45e59bf588925cce3323a5613e66c7b2d6d1af0e96ad",
       "size_bytes": 47648
     },
     {
@@ -159,18 +159,18 @@
     },
     {
       "path": "artifacts/publication_figures/figure_02_extreme_gap_revalidation.svg",
-      "sha256": "7ef80ee66a9f8eb6b3f0c34c9ddce783b5d3f8d75fb5fe37755789803609c547",
+      "sha256": "75305bb154361f114b759e603f0df1706296da10e30ba81f0dc4f839753df6dc",
       "size_bytes": 48758
     },
     {
       "path": "artifacts/publication_figures/figure_03_same_date_different_returns.png",
-      "sha256": "d3e7395dcbbb231e92000be43a09eb59bf11eb15b1856b020a523528d4dfecca",
-      "size_bytes": 63355
+      "sha256": "0a0b9da4616c212456ed1e27fd475b84e5b4081bed28800ebb98f7eacd05586d",
+      "size_bytes": 63595
     },
     {
       "path": "artifacts/publication_figures/figure_03_same_date_different_returns.svg",
-      "sha256": "0942055b5a299e0e6fea1d04c3787887df24a12df550d6c100d9b56b149b749a",
-      "size_bytes": 46630
+      "sha256": "030e5c74e295195c198798182a306f17959966230e9a04c08a8361eb09cdae3f",
+      "size_bytes": 46616
     },
     {
       "path": "artifacts/publication_figures/figure_04_cutoff_vs_venue_effect.png",
@@ -179,7 +179,7 @@
     },
     {
       "path": "artifacts/publication_figures/figure_04_cutoff_vs_venue_effect.svg",
-      "sha256": "c4ed44b4d4403f211c11012cd80a36bef74dc77c53bbb972f25dd02f8b0b52fb",
+      "sha256": "9531b6439d83a08edd90f2b1c50e890a4aee11dd2d6abacf08da1c746e323ee3",
       "size_bytes": 66725
     },
     {
@@ -189,17 +189,17 @@
     },
     {
       "path": "artifacts/publication_figures/figure_05_volatility_dispersion_appendix.svg",
-      "sha256": "d2aacd37b7b07391bf5d90a5c094ff424d3f478a41fd710571e56b49e862815a",
+      "sha256": "e73fe35d2f267a578c63736c60f8b1b43b7b5a4ba19a67ecaa4f7fe4a9458e7c",
       "size_bytes": 46290
     },
     {
       "path": "artifacts/publication_figures/manifest.json",
-      "sha256": "531679348b1d47fbd55cb35a42888d245dfad19699ab0e85215948c828f7a5b6",
+      "sha256": "e3e7ae0df4fb83cb20398b093cc37a168c78b04c807a8df7b496b9a4127bf9ef",
       "size_bytes": 2197
     },
     {
       "path": "artifacts/publication_figures/publication_figure_summary.json",
-      "sha256": "54c818c160b16b816c12e101b13ec755e3765c33f3edadb337382d683df62c03",
+      "sha256": "ef624d33193eca05df490078b76257fc476f41d33a76a77edb8c8249e19649ec",
       "size_bytes": 1148
     },
     {
@@ -359,8 +359,8 @@
     },
     {
       "path": "scripts/research/publication_figures.py",
-      "sha256": "8c71163911ad14de38f6178330957943e937050065c1e12d818bfc93d35d3e98",
-      "size_bytes": 17969
+      "sha256": "f43765d51b399ea5ccd6a2651abae4378acd0e5bbf9a1c76aa8d6fe845fb8b56",
+      "size_bytes": 18077
     },
     {
       "path": "scripts/research/source_capability_probe.py",
@@ -434,7 +434,7 @@
     }
   ],
   "final_assurance_decision": "PASS",
-  "generated_at_utc": "2026-08-13T01:23:35.152924+00:00",
+  "generated_at_utc": "2026-08-13T01:57:50.569298+00:00",
   "raw_market_data_included": false,
   "release": "1.0.0",
   "repository": "Hilmar-Corp/HC-btc-price-reference-study",
