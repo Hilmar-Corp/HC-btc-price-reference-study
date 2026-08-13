@@ -44,8 +44,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "bdd986a43015fd8b495a711d45d0f6aca6e3c8b5bc3c9cdde7736bae4f2f7ac7",
-      "size_bytes": 11979
+      "sha256": "141adb6a0e198787260daab1b69619b8bd02586319eb676a83664e7c1800656c",
+      "size_bytes": 11579
     },
     {
       "path": "REPRODUCIBILITY.md",
@@ -434,7 +434,7 @@
     }
   ],
   "final_assurance_decision": "PASS",
-  "generated_at_utc": "2026-08-13T01:16:01.946258+00:00",
+  "generated_at_utc": "2026-08-13T01:18:41.759483+00:00",
   "raw_market_data_included": false,
   "release": "1.0.0",
   "repository": "Hilmar-Corp/HC-btc-price-reference-study",

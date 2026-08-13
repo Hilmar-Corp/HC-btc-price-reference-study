@@ -1,455 +1,402 @@
-# Bitcoin Price Reference Study
+# HC-btc-price-reference-study
 
 [![Research Assurance](https://github.com/Hilmar-Corp/HC-btc-price-reference-study/actions/workflows/research-assurance.yml/badge.svg?branch=main)](https://github.com/Hilmar-Corp/HC-btc-price-reference-study/actions/workflows/research-assurance.yml)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB)
-![Research](https://img.shields.io/badge/research-multi--venue-2ea44f)
+![Research](https://img.shields.io/badge/research-multi--source-2ea44f)
 ![Assurance](https://img.shields.io/badge/assurance-fail--closed-2ea44f)
-![License](https://img.shields.io/badge/license-Apache--2.0-blue)
+[![Licence Apache 2.0](https://img.shields.io/badge/licence-Apache--2.0-blue)](LICENSE)
 
-**Reproducible multi-venue empirical study of Bitcoin price dispersion, valuation cut-offs and reference-price construction.**
+Expérience reproductible accompagnant une note HilmarCorp Research consacrée à la construction d'un prix de référence pour Bitcoin.
 
-This repository contains the research pipeline, controlled evidence, validation framework and publication figures supporting HilmarCorp's study of Bitcoin price-reference construction.
+**Qui fixe réellement le prix de Bitcoin ?**
 
-The central distinction is:
+Le dépôt étudie deux dimensions distinctes de la mesure du prix de Bitcoin :
 
-> Markets form prices. A methodology constructs a reference.
+- les différences observées entre plusieurs plateformes à un instant donné ;
+- l'effet de la convention temporelle utilisée pour définir une valorisation quotidienne.
 
-Bitcoin trades continuously across multiple venues. Unlike an exchange-traded security with a designated closing auction, Bitcoin has no universal end-of-day boundary imposed by the asset itself.
+Le dépôt contient le code de recherche, les contrôles méthodologiques, les artefacts dérivés, les figures de publication et le dispositif d'assurance associé.
 
-A daily reference therefore depends on explicit methodological choices including:
+## Question de recherche
 
-- venue selection;
-- timestamp convention;
-- observation window;
-- aggregation rule;
-- filtering and missing-data treatment.
+Bitcoin est négocié en continu sur plusieurs plateformes.
 
-## Research questions
+Il ne dispose ni d'une plateforme mondiale unique, ni d'une clôture quotidienne universelle comparable à la clôture officielle d'un marché organisé traditionnel.
 
-The study evaluates four questions:
+La recherche distingue donc deux questions :
 
-1. How large are BTC/USD price differences across major venues?
-2. Do historically extreme cross-venue gaps survive narrower-window and third-source validation?
-3. How much does the measured daily return change when the valuation boundary changes?
-4. Is cross-venue dispersion descriptively associated with prior market volatility?
+1. Dans quelle mesure les prix observés simultanément sur plusieurs plateformes diffèrent-ils ?
+2. Dans quelle mesure la mesure d'un rendement quotidien dépend-elle de l'heure retenue comme frontière de valorisation ?
 
-The study does **not** attempt to identify a unique "true" Bitcoin price.
+L'étude ne cherche pas à identifier un « vrai prix » unique de Bitcoin.
 
-The research composite used in parts of the analysis is not represented as an official benchmark.
+Elle documente la manière dont une référence de prix dépend de conventions explicites de source, d'horodatage et d'agrégation.
 
-## Final assurance
+## Périmètre
 
-The frozen research bundle passes the consolidated assurance framework.
+Période principale :
 
-| Control domain | Status |
-|:--|:--|
-| Historical source capability | Validated |
-| Recent source capability | Validated |
-| Coinbase hourly coverage | Validated |
-| Bitstamp hourly coverage | Validated |
-| Common hourly sample | Validated |
-| Dispersion consistency | Validated |
-| Extreme-gap three-source revalidation | Validated |
-| Extreme-gap minute persistence | Validated |
-| Valuation-boundary sample | Validated |
-| Missing-boundary control | Validated |
-| DST sensitivity | Validated |
-| Strict-calendar RV24 sensitivity | Validated |
-| Full-sample volatility monotonicity | Validated |
-| Recent-period volatility monotonicity | Validated |
-| Controlled artifact inventory | Validated |
-| Consolidated decision | **PASS — 16/16** |
+    17 août 2017 au 10 août 2026
 
-The framework is fail-closed: a failed required control prevents a passing consolidated decision.
+Sources principales :
 
-## Data scope
+    Coinbase BTC-USD
+    Bitstamp BTC/USD
 
-Primary research period:
+Source indépendante utilisée pour la revalidation d'événements extrêmes :
 
-**17 August 2017 to 10 August 2026**
+    Kraken BTC/USD
 
-Primary venues:
+Fréquence principale :
 
-- Coinbase BTC-USD;
-- Bitstamp BTC/USD.
+    horaire
 
-Kraken BTC/USD is used as an independent third source for minute-level revalidation of selected historical extreme events.
+Conventions de valorisation quotidienne :
 
-### Hourly panel
+    00:00 UTC
+    16:00 Europe/London
+    16:00 America/New_York
 
-| Metric | Result |
-|:--|--:|
-| Expected hours | 78,744 |
-| Coinbase observations | 78,699 |
-| Coinbase coverage | 99.943% |
-| Bitstamp observations | 78,744 |
-| Bitstamp coverage | 100.000% |
-| Common observations | **78,699** |
+Les conversions Londres et New York sont effectuées avec des fuseaux horaires IANA et tiennent compte des changements d'heure saisonniers.
 
-No interpolation or forward filling is used to manufacture unavailable observations.
+## Méthodologie
 
-## Main results
+Pour les prix de plateforme P(i,t), la référence de recherche à l'instant t est construite à partir de la médiane des sources disponibles :
 
-### Cross-venue dispersion
+    M(t) = médiane(P(1,t), ..., P(N,t))
 
-Across the 78,699 common hourly observations:
+La dispersion inter-plateformes est mesurée en points de base relativement à cette médiane :
 
-| Statistic | Dispersion |
-|:--|--:|
-| Median | **1.88 bps** |
-| P90 | **9.06 bps** |
-| P95 | **15.70 bps** |
-| P99 | **87.54 bps** |
-| Maximum | **897.43 bps** |
+    D(t) = 10 000 × [max(P(i,t)) - min(P(i,t))] / M(t)
 
-Median dispersion declines materially across the study subperiods:
+La mesure du rendement quotidien dépend d'une heure de valorisation τ :
 
-| Period | Median dispersion |
-|:--|--:|
-| 2017–2020 | 4.56 bps |
-| 2021–2023 | 1.68 bps |
-| 2024–2026 | **0.88 bps** |
+    r(t,τ) = P(t,τ) / P(t-1,τ) - 1
 
-![Hourly cross-venue dispersion](artifacts/publication_figures/figure_01_venue_convergence.png)
+Cette construction permet de séparer :
 
-### Extreme-gap validation
+- l'effet source : plusieurs plateformes à heure de valorisation identique ;
+- l'effet frontière : une même règle de référence à différentes heures de valorisation.
 
-The 40 largest hourly dispersion observations were selected for diagnostic revalidation.
+## Principes de traitement des données
 
-**39/40** were successfully revalidated at one-minute resolution with Coinbase, Bitstamp and Kraken.
+Le protocole applique les règles suivantes :
 
-| Measurement | Median dispersion |
-|:--|--:|
-| Selected hourly observations | 579.68 bps |
-| Final minute — Coinbase + Bitstamp | 578.60 bps |
-| Final minute — Coinbase + Bitstamp + Kraken | **595.22 bps** |
+- normalisation des horodatages en UTC ;
+- absence d'interpolation ;
+- absence de forward-fill ;
+- absence de fallback silencieux entre fournisseurs ;
+- exclusion explicite des observations indisponibles ;
+- contrôles de doublons ;
+- contrôles de positivité et de finitude ;
+- horodatages exacts ou fenêtres bornées explicitement ;
+- conversion DST-aware des heures locales ;
+- construction de la volatilité passée sans donnée de l'heure courante ;
+- validation indépendante de certains événements extrêmes.
 
-Maximum three-source one-minute dispersion:
+Les absences de données ne sont pas reconstruites artificiellement.
 
-**994.79 bps**
+## Expériences produites
 
-This is an extreme-event diagnostic. It is not an estimator of routine market conditions.
+Le pipeline comporte cinq blocs principaux.
 
-![Extreme-gap revalidation](artifacts/publication_figures/figure_02_extreme_gap_revalidation.png)
+### 1. Dispersion inter-plateformes
 
-### Valuation-boundary sensitivity
+Analyse horaire commune Coinbase / Bitstamp sur la période complète.
 
-Three daily valuation conventions are evaluated:
+Artefacts principaux :
 
-- 00:00 UTC;
-- 16:00 Europe/London;
-- 16:00 America/New_York.
+    artifacts/hourly_dispersion/
 
-Local-clock boundaries are daylight-saving aware.
+### 2. Revalidation des observations extrêmes
 
-The complete-case daily sample contains **3,271 observations**.
+Les plus fortes dispersions horaires sont réexaminées à une granularité d'une minute.
 
-| Comparison | Median absolute difference | P90 | Sign disagreement |
-|:--|--:|--:|--:|
-| UTC / London | 182.55 bps | 617.05 bps | 40.42% |
-| UTC / New York | **225.33 bps** | 732.19 bps | **48.39%** |
-| London / New York | 102.31 bps | 382.48 bps | 23.94% |
+Kraken est ajouté comme troisième source indépendante.
 
-At a fixed valuation boundary, median Coinbase-Bitstamp return differences are only:
+Artefacts principaux :
 
-**2.60 to 3.29 bps**
+    artifacts/extreme_gap_validation/
 
-Across the three valuation conventions, median daily-return dispersion is:
+### 3. Sensibilité à l'heure de valorisation
 
-**284.06 bps**
+Comparaison des rendements quotidiens obtenus sous trois frontières :
 
-The descriptive ratio between the median three-cutoff dispersion and median fixed-cutoff venue effect is approximately:
+    00:00 UTC
+    16:00 Londres
+    16:00 New York
 
-**105×**
+Artefacts principaux :
 
-This ratio is descriptive and is not presented as a structural constant.
+    artifacts/valuation_boundary/
 
-Illustrative observation — 27 June 2019:
+### 4. Dispersion et volatilité passée
 
-| Valuation boundary | Daily return |
-|:--|--:|
-| 00:00 UTC | +9.96% |
-| 16:00 London | -6.60% |
-| 16:00 New York | -21.81% |
+Étude descriptive du lien entre la dispersion inter-plateformes et la volatilité réalisée sur les 24 heures calendaires strictement précédentes.
 
-The three values describe different 24-hour windows.
+Artefacts principaux :
 
-![Daily return by valuation boundary](artifacts/publication_figures/figure_03_same_date_different_returns.png)
+    artifacts/volatility_dispersion/
 
-![Venue effect versus valuation-boundary effect](artifacts/publication_figures/figure_04_cutoff_vs_venue_effect.png)
+### 5. Assurance consolidée
 
-### Dispersion and prior volatility
+Contrôle de cohérence du bundle de recherche final.
 
-The final volatility analysis uses the strictly preceding **24 calendar hours**.
+Artefacts principaux :
 
-The return ending in the current dispersion hour is excluded.
+    artifacts/final_assurance/
 
-| Sample | Spearman | Q5/Q1 median-dispersion ratio |
-|:--|--:|--:|
-| Full sample | **0.305** | **3.27×** |
-| 2024–2026 | **0.131** | **1.48×** |
+## Figures de publication
 
-The association remains monotonic but is materially weaker in the recent period.
+Les figures finales sont générées dans :
 
-This analysis is descriptive and does not establish causality.
+    artifacts/publication_figures/
 
-![Volatility sensitivity](artifacts/publication_figures/figure_05_volatility_dispersion_appendix.png)
+Le dossier contient les versions PNG et SVG.
 
-## Methodology
+Les figures couvrent :
 
-For venue prices \(P_{i,t}\), define the research cross-venue median:
+1. l'évolution de la dispersion horaire inter-plateformes ;
+2. la revalidation des écarts horaires extrêmes ;
+3. un exemple de sensibilité du rendement à l'heure de valorisation ;
+4. la comparaison de l'effet plateforme et de l'effet heure de valorisation ;
+5. la relation descriptive entre volatilité passée et dispersion.
 
-\[
-M_t = \operatorname{median}(P_{1,t}, \ldots, P_{N,t})
-\]
+## Assurance de recherche
 
-and cross-venue dispersion:
+Le dépôt implémente un dispositif fail-closed.
 
-\[
-D_t =
-10^4
-\frac{\max_i P_{i,t} - \min_i P_{i,t}}
-{M_t}.
-\]
+La décision consolidée est enregistrée dans :
 
-For valuation boundary \(\tau\), the daily return is:
+    artifacts/final_assurance/consolidated_decision.json
 
-\[
-r_t^{(\tau)}
-=
-\frac{P(t,\tau)}
-{P(t-1,\tau)}
--1.
-\]
+Le snapshot actuellement publié contient :
 
-This separates:
+    16 contrôles requis
+    16 contrôles validés
+    0 contrôle en échec
 
-- **source effect** — different venues at the same valuation boundary;
-- **boundary effect** — the same reference methodology at different valuation times.
+Les domaines vérifiés couvrent notamment :
 
-## Research controls
+- capacité des sources historiques et récentes ;
+- couverture des séries horaires ;
+- cohérence de l'intersection Coinbase / Bitstamp ;
+- cohérence du calcul de dispersion ;
+- revalidation trois-sources des observations extrêmes ;
+- validation à la minute ;
+- couverture des dates de valorisation ;
+- traitement du DST ;
+- robustesse du calcul de volatilité sur 24 heures calendaires ;
+- présence des artefacts contrôlés.
 
-The pipeline implements:
+Le dépôt utilise également un registre SHA-256 des fichiers contrôlés :
 
-- UTC normalization;
-- timezone-aware valuation boundaries;
-- daylight-saving handling through IANA timezones;
-- exact or explicitly bounded timestamps;
-- no interpolation;
-- no forward fill;
-- no silent source fallback;
-- deterministic exclusions;
-- cross-source replication;
-- independent Kraken revalidation of selected extreme events;
-- strict-calendar lagged volatility;
-- no current-hour information in prior-volatility construction;
-- SHA-256 manifests;
-- deterministic tests;
-- analytical-core coverage gates;
-- explicit fail-closed assurance.
+    evidence/repository_evidence.json
 
-## Repository structure
+## Couverture du coeur analytique
 
-```text
-.
-├── .github/
-│   └── workflows/
-│       └── research-assurance.yml
-├── artifacts/
-│   ├── extreme_gap_validation/
-│   ├── final_assurance/
-│   ├── full_history_hourly/
-│   ├── gate3_validation/
-│   ├── hourly_dispersion/
-│   ├── publication_figures/
-│   ├── source_audit/
-│   ├── valuation_boundary/
-│   └── volatility_dispersion/
-├── evidence/
-│   └── repository_evidence.json
-├── scripts/
-│   └── research/
-├── tests/
-├── acquisition_protocol.json
-├── research_contract.json
-├── source_registry.json
-├── DATA_NOTICE.md
-├── REPRODUCIBILITY.md
-├── RESEARCH_ASSURANCE.md
-├── CITATION.cff
-├── LICENSE
-├── NOTICE
-├── Makefile
-├── pyproject.toml
-└── requirements-ci.txt
-```
+Le coeur analytique fait l'objet d'une mesure de couverture avec branches activées.
+
+Seuils CI :
+
+    couverture des lignes >= 85 %
+    couverture des branches >= 75 %
+
+Snapshot validé lors de la publication initiale :
+
+    couverture des lignes : 97,94 %
+    couverture des branches : 94,44 %
+
+## Organisation du dépôt
+
+    .
+    ├── .github/
+    │   └── workflows/
+    │       └── research-assurance.yml
+    ├── artifacts/
+    │   ├── extreme_gap_validation/
+    │   ├── final_assurance/
+    │   ├── full_history_hourly/
+    │   ├── gate3_validation/
+    │   ├── hourly_dispersion/
+    │   ├── publication_figures/
+    │   ├── source_audit/
+    │   ├── valuation_boundary/
+    │   └── volatility_dispersion/
+    ├── evidence/
+    │   └── repository_evidence.json
+    ├── scripts/
+    │   └── research/
+    ├── tests/
+    ├── acquisition_protocol.json
+    ├── research_contract.json
+    ├── source_registry.json
+    ├── DATA_NOTICE.md
+    ├── REPRODUCIBILITY.md
+    ├── RESEARCH_ASSURANCE.md
+    ├── CITATION.cff
+    ├── Makefile
+    ├── LICENSE
+    ├── NOTICE
+    ├── pyproject.toml
+    └── requirements-ci.txt
 
 ## Installation
 
-Controlled runtime:
+Créer un environnement Python 3.12 :
 
-**Python 3.12**
+    python3.12 -m venv .venv
+    source .venv/bin/activate
 
-```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
+Installer les dépendances contrôlées :
 
-python -m pip install --upgrade pip
-python -m pip install -r requirements-ci.txt
-python -m pip check
-```
+    python -m pip install --upgrade pip
+    python -m pip install -r requirements-ci.txt
+    python -m pip check
 
-## Local assurance
+## Tests
 
-Run all static checks:
+Exécuter la suite complète :
 
-```bash
-python -m ruff format --check scripts tests
-python -m ruff check scripts tests
-python -m compileall -q scripts tests
-```
+    python -m pytest -q
 
-Run the complete deterministic test suite:
+Contrôler Ruff :
 
-```bash
-python -m pytest -q
-```
+    python -m ruff format --check scripts tests
+    python -m ruff check scripts tests
 
-Verify the frozen repository evidence:
+Contrôler la compilation :
 
-```bash
-python -m scripts.research.verify_repository
-```
+    python -m compileall -q scripts tests
 
-Run analytical-core coverage:
+## Vérification du snapshot publié
 
-```bash
-make coverage
-```
+Le snapshot publié peut être vérifié hors ligne sans redistribuer les données de marché brutes.
 
-Run the complete repository assurance sequence:
+Exécuter :
 
-```bash
-make assurance
-```
+    python -m scripts.research.verify_repository
 
-A valid frozen bundle ends with:
+Résultat attendu :
 
-```text
-REPOSITORY ASSURANCE: PASS
-CORE COVERAGE GATE: PASS
-```
+    REPOSITORY ASSURANCE: PASS
 
-## Reproducibility
+Cette vérification contrôle notamment :
 
-Two reproducibility layers are intentionally separated.
+- les empreintes SHA-256 ;
+- les artefacts attendus ;
+- la décision finale 16/16 ;
+- l'absence de données brutes suivies par Git ;
+- la présence de la licence Apache 2.0.
 
-### Frozen-evidence verification
+## Couverture analytique
 
-Anyone can verify:
+Exécuter :
 
-- committed code;
-- tests;
-- SHA-256 manifests;
-- derived artifacts;
-- publication figures;
-- final assurance state.
+    make coverage
 
-This does not require redistribution of third-party raw market data.
+Résultat attendu :
 
-### Full empirical reconstruction
+    CORE COVERAGE GATE: PASS
 
-A complete reconstruction requires reacquiring the relevant exchange market data.
+## Assurance complète
 
-See:
+Exécuter :
 
-`REPRODUCIBILITY.md`
+    make assurance
 
-## GitHub Research Assurance
+Cette commande regroupe :
 
-Every:
+- contrôle de format ;
+- lint ;
+- compilation ;
+- tests ;
+- vérification du snapshot ;
+- couverture du coeur analytique.
 
-- push to `main`;
-- pull request;
-- manual workflow dispatch
+## Reproduction complète
 
-runs the `Research Assurance` workflow.
+Une reproduction complète depuis les sources de données suit la séquence :
 
-CI checks:
+    python -m scripts.research.source_capability_probe
+    python -m scripts.research.hourly_history
+    python -m scripts.research.hourly_dispersion_analysis
+    python -m scripts.research.extreme_gap_validation --top 40
+    python -m scripts.research.valuation_boundary_analysis
+    python -m scripts.research.volatility_dispersion_analysis
+    python -m scripts.research.final_assurance
+    python -m scripts.research.publication_figures
 
-- controlled dependency installation;
-- Ruff formatting;
-- Ruff lint;
-- Python compilation;
-- complete deterministic tests;
-- frozen SHA-256 evidence;
-- consolidated 16/16 research decision;
-- absence of tracked raw market-data caches;
-- analytical-core line coverage;
-- analytical-core branch coverage.
+Voir :
 
-Minimum analytical-core gates:
+    REPRODUCIBILITY.md
 
-- line coverage ≥ **85%**;
-- branch coverage ≥ **75%**.
+pour les détails du protocole.
 
-## Data and third-party rights
+## Données de marché
 
-Raw third-party market data is intentionally excluded from the public repository.
+Les caches complets de données de marché tierces ne sont pas redistribués dans le dépôt public.
 
-Apache License 2.0 applies to HilmarCorp's original software and repository content.
+Le dépôt permet :
 
-It does **not** grant rights to third-party exchange datasets, APIs, trademarks or services.
+- la vérification exacte des artefacts dérivés publiés ;
+- la reproduction méthodologique après nouvelle acquisition des données.
 
-See:
+Les données tierces restent soumises aux droits et conditions de leurs fournisseurs respectifs.
 
-`DATA_NOTICE.md`
+Voir :
 
-## Interpretation limits
+    DATA_NOTICE.md
 
-This repository contains descriptive quantitative research.
+## Limites d'interprétation
 
-The results:
+Cette expérience est descriptive.
 
-- do not establish a unique true Bitcoin price;
-- do not establish that the research composite is an official benchmark;
-- do not establish that volatility causes cross-venue dispersion;
-- do not predict future returns;
-- do not establish trading profitability;
-- do not constitute investment advice;
-- are conditional on the selected venues, period and methodologies;
-- may evolve as market structure changes.
+Elle ne constitue pas :
 
-## Research governance
+- un modèle de prévision ;
+- une stratégie d'investissement ;
+- une preuve de causalité entre volatilité et dispersion ;
+- une définition officielle d'un benchmark Bitcoin ;
+- une démonstration de l'existence d'un prix unique de Bitcoin ;
+- un conseil en investissement.
 
-The repository is designed to preserve:
+Les résultats sont conditionnels :
 
-- reproducibility;
-- source traceability;
-- explicit assumptions;
-- deterministic exclusions;
-- controlled evidence;
-- independent source validation;
-- versioned analytical outputs;
-- fail-closed assurance;
-- resistance to unsupported editorial claims.
+- aux plateformes étudiées ;
+- à la période étudiée ;
+- aux granularités utilisées ;
+- aux conventions d'horodatage ;
+- aux règles de construction définies dans le protocole.
 
-## Citation
+## Documentation d'assurance
 
-Citation metadata is available in `CITATION.cff`.
+Documentation associée :
 
-## License
+- `RESEARCH_ASSURANCE.md`
+- `REPRODUCIBILITY.md`
+- `DATA_NOTICE.md`
+- `research_contract.json`
+- `source_registry.json`
+- `acquisition_protocol.json`
+- `evidence/repository_evidence.json`
 
-Apache License 2.0.
+## Licence
 
-See `LICENSE` and `NOTICE`.
+Le code original, les tests, les scripts d'automatisation et la documentation originale sont publiés sous licence Apache 2.0.
 
-Third-party market data is outside the Apache-2.0 grant.
+Les données de marché tierces restent soumises aux conditions et droits applicables de leurs fournisseurs respectifs.
 
-## Ownership
+Voir :
 
-Copyright © 2026 HilmarCorp SAS.
+    LICENSE
+    NOTICE
+    DATA_NOTICE.md
 
-Public quantitative research repository.
+## Disclaimer
 
-No investment advice.
+Ce dépôt est fourni à des fins de recherche quantitative et de pédagogie financière.
+
+Il ne constitue ni un conseil en investissement, ni une recommandation, ni une prévision, ni une offre d'achat ou de vente d'un actif numérique ou d'un instrument financier.
+
+Les résultats sont historiques et conditionnels aux conventions décrites dans le dépôt.
